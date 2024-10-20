@@ -1,12 +1,14 @@
-let person = {
-    name: "John",
-    age: 30
-};
+const obj = {};
 
-person.city = "New York";
+function manipulateObject() {
+    const propName = document.getElementById('propertyName').value;
+    const propValue = document.getElementById('propertyValue').value;
+    obj[propName] = propValue;
+    document.getElementById('result').innerText = `Updated Object: ${JSON.stringify(obj)}`;
+}
 
-person.age = 31;
-
-delete person.city;
-
-console.log(person);
+function removeProperty() {
+    const propName = document.getElementById('propertyName').value;
+    delete obj[propName];
+    document.getElementById('result').innerText = `Updated Object: ${JSON.stringify(obj)}`;
+}

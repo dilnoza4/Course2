@@ -1,18 +1,15 @@
-function throttle(func, delay) {
-    let lastTime = 0;
+let lastExecutionTime = 0;
 
-    return function(...args) {
-        const now = new Date().getTime();
-
-        if (now - lastTime >= delay) {
-            func.apply(this, args);
-            lastTime = now;
+function throttle(callback, limit) {
+    return function() {
+        const now = Date.now();
+        if (now - lastExecutionTime >= limit) {
+            lastExecutionTime = now;
+            callback.apply(this, arguments);
         }
     };
 }
 
-const log = () => console.log('Throttled Function called!');
-const throttledLog = throttle(log, 2000);
-
-
-setInterval(throttledLog, 500);
+document.getElementById('throttleButton').onclick = throttle(function() {
+    document.getElementById('result').innerText += "Button Clicked! ";
+}, 2000);

@@ -1,18 +1,19 @@
-function isPrime(num) {
-    if (num < 2) return false;
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) return false;
-    }
-    return true;
-}
+function findPrimes() {
+    const limit = parseInt(document.getElementById('limitInput').value);
+    const primes = [];
 
-function getPrimes(limit) {
-    let primes = [];
-    for (let i = 2; i <= limit; i++) {
-        if (isPrime(i)) {
-            primes.push(i);
+    for (let num = 2; num <= limit; num++) {
+        let isPrime = true;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            primes.push(num);
         }
     }
-    return primes;
+
+    document.getElementById('result').innerText = `Prime Numbers: ${primes.join(', ')}`;
 }
-console.log(getPrimes(20));

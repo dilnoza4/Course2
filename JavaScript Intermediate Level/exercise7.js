@@ -1,4 +1,6 @@
-function flattenArray(arr) {
-    return arr.flat(Infinity);
+function flattenArray() {
+    const input = document.getElementById('arrayInput').value;
+    const nestedArray = JSON.parse(input);
+    const flatArray = nestedArray.flat(Infinity);
+    document.getElementById('result').innerText = `Flattened Array: ${flatArray.join(', ')}`;
 }
-console.log(flattenArray([1, [5, [3, [4]], 7]]));

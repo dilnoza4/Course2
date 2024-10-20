@@ -1,27 +1,16 @@
-class ToDoList {
-    constructor() {
-        this.tasks = [];
-    }
+function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskValue = taskInput.value.trim();
+    if (taskValue === "") return;
 
-    addTask(task) {
-        this.tasks.push({ task, completed: false });
-    }
+    const li = document.createElement('li');
+    li.textContent = taskValue;
+    li.classList.add('list-group-item');
 
-    completeTask(index) {
-        if (this.tasks[index]) {
-            this.tasks[index].completed = true;
-        }
-    }
+    li.onclick = function() {
+        this.classList.toggle('list-group-item-success');
+    };
 
-    showTasks() {
-        this.tasks.forEach((task, index) => {
-            console.log(`${index + 1}. ${task.task} [${task.completed ? "Completed" : "Pending"}]`);
-        });
-    }
+    document.getElementById('taskList').appendChild(li);
+    taskInput.value = "";
 }
-
-const myToDoList = new ToDoList();
-myToDoList.addTask("Learn JavaScript");
-myToDoList.addTask("Build a To-Do List");
-myToDoList.completeTask(0);
-myToDoList.showTasks();

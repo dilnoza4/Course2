@@ -1,4 +1,6 @@
-function uniqueValues(arr) {
-    return [...new Set(arr)];
+function getUniqueValues() {
+    const input = document.getElementById('arrayInput').value;
+    const numbers = input.split(',').map(Number);
+    const uniqueValues = [...new Set(numbers)];
+    document.getElementById('result').innerText = `Unique Values: ${uniqueValues.join(', ')}`;
 }
-console.log(uniqueValues([1, 2, 2, 3, 4, 4, 5]));

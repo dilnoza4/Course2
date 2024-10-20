@@ -1,4 +1,7 @@
-function findIntersection(arr1, arr2) {
-    return arr1.filter(value => arr2.includes(value));
+function findIntersection() {
+    const array1 = document.getElementById('array1Input').value.split(',').map(Number);
+    const array2 = document.getElementById('array2Input').value.split(',').map(Number);
+    const intersection = array1.filter(value => array2.includes(value));
+
+    document.getElementById('result').innerText = `Intersection: ${intersection.join(', ')}`;
 }
-console.log(findIntersection([1, 2, 3], [2, 3, 4]));

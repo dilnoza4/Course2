@@ -1,8 +1,10 @@
-function fibonacci(n) {
-    let fibSeq = [0, 1];
+function generateFibonacci() {
+    const n = parseInt(document.getElementById('nInput').value);
+    const fibonacci = [0, 1];
+
     for (let i = 2; i < n; i++) {
-        fibSeq[i] = fibSeq[i - 1] + fibSeq[i - 2];
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
     }
-    return fibSeq.slice(0, n);
+
+    document.getElementById('result').innerText = `Fibonacci Sequence: ${fibonacci.slice(0, n).join(', ')}`;
 }
-console.log(fibonacci(10));

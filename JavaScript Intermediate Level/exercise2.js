@@ -1,6 +1,6 @@
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+function validateEmail() {
+    const email = document.getElementById('emailInput').value;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = regex.test(email);
+    document.getElementById('result').innerText = isValid ? "Valid Email!" : "Invalid Email!";
 }
-console.log(isValidEmail("test@example.com"));
-console.log(isValidEmail("invalid-email"));
