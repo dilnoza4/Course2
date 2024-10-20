@@ -20,3 +20,12 @@ This repository contains a collection of beginner-level JavaScript exercises des
 14. **Remove Duplicates from Array**: Write a function that removes duplicate values from an array.
 15. **Print Current Date and Time**: Create a script to display the current date and time in a readable format.
 
+## Technologies Used
+
+- HTML
+- JavaScript
+
+## Contributing
+
+If you would like to contribute to this project, feel free to fork the repository and submit a pull request with your improvements or additional exercises.
+
