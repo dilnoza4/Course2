@@ -29,3 +29,35 @@ This repository contains a collection of beginner-level JavaScript exercises des
 
 If you would like to contribute to this project, feel free to fork the repository and submit a pull request with your improvements or additional exercises.
 
+
+# Intermediate JavaScript Exercises
+
+This project contains a collection of intermediate JavaScript exercises designed to help you enhance your coding skills. Each exercise is structured in its own HTML file with accompanying JavaScript to handle functionality.
+
+## Exercises Overview
+
+1. **Sort an Array of Numbers**: Implement a sorting algorithm (bubble sort, insertion sort, or any built-in method) to sort an array.
+2. **Validate Email Format**: Write a function to check if an email address is valid using regular expressions.
+3. **Object Property Manipulation**: Create an object, add, remove, and update its properties dynamically.
+4. **Count Word Occurrences**: Write a function to count the occurrences of each word in a string.
+5. **Find Prime Numbers**: Write a function that returns an array of prime numbers up to a given limit.
+6. **Check for Anagram**: Write a function that checks whether two strings are anagrams of each other.
+7. **Flatten Nested Arrays**: Create a function to flatten a multi-dimensional array into a single array.
+8. **Get Unique Values from Array**: Write a function that returns an array with only the unique values from a list.
+9. **Check Substring Presence**: Write a function that checks if one string is a substring of another.
+10. **Generate Fibonacci Sequence**: Write a function that generates the first n Fibonacci numbers.
+11. **Capitalize Words in a Sentence**: Create a function that capitalizes the first letter of each word in a given sentence.
+12. **Find Intersection of Two Arrays**: Write a function that returns the common elements between two arrays.
+13. **Deep Clone an Object**: Implement a deep clone function to copy all nested properties of an object.
+14. **Throttle a Function**: Write a function that throttles the execution of another function (limits how often a function is called).
+15. **Implement a Basic To-Do List**: Create a simple to-do list application where tasks can be added and marked as complete.
+
+## Technologies Used
+
+- HTML
+- JavaScript
+- Bootstrap for styling
+
+
+
+
