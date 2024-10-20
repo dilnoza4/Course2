@@ -1,19 +1,31 @@
-document.getElementById('fizzBuzzForm').addEventListener('submit', function(e) {
+
+document.getElementById('calculatorForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    let number = parseInt(document.getElementById('fizzBuzzNumber').value);
-    let result = '';
 
-    for (let i = 1; i <= number; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            result += 'FizzBuzz, ';
-        } else if (i % 3 === 0) {
-            result += 'Fizz, ';
-        } else if (i % 5 === 0) {
-            result += 'Buzz, ';
-        } else {
-            result += `${i}, `;
-        }
-    }
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let operation = document.getElementById('operation').value;
 
-    document.getElementById('fizzBuzzResult').textContent = result.slice(0, -2); // To remove trailing comma
+    let result = calculate(operation, num1, num2);
+
+
+    document.getElementById('calcResult').textContent = "Result: " + result;
 });
+
+function calculate(operation, num1, num2) {
+    switch (operation) {
+        case 'add':
+            return num1 + num2;
+        case 'subtract':
+            return num1 - num2;
+        case 'multiply':
+            return num1 * num2;
+        case 'divide':
+            if (num2 === 0) {
+                return "Error: Division by zero";
+            }
+            return num1 / num2;
+        default:
+            return "Invalid operation";
+    }
+}
